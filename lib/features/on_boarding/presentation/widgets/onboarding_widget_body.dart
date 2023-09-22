@@ -5,17 +5,19 @@ import 'package:flutter/material.dart';
 import 'custom_smooth_page_indicator.dart';
 
 class OnBoardingWidgetBody extends StatelessWidget {
-  OnBoardingWidgetBody({super.key});
+  OnBoardingWidgetBody(
+      {super.key, required this.controller, this.onPageChanged});
 
-  final PageController _controller = PageController();
-
+  final PageController controller;
+  Function(int)? onPageChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 500.0,
       child: PageView.builder(
+        onPageChanged: onPageChanged,
         physics: const BouncingScrollPhysics(),
-        controller: _controller,
+        controller: controller,
         itemCount: onBoardingData.length,
         itemBuilder: (context, index) => Column(
           children: [
@@ -32,7 +34,7 @@ class OnBoardingWidgetBody extends StatelessWidget {
             const SizedBox(
               height: 24.0,
             ),
-            CustomSmoothPageIndicator(controller: _controller),
+            CustomSmoothPageIndicator(controller: controller),
             const SizedBox(
               height: 32.0,
             ),
@@ -49,7 +51,7 @@ class OnBoardingWidgetBody extends StatelessWidget {
               height: 16.0,
             ),
             Text(
-              onBoardingData[index].imagePath,
+              onBoardingData[index].subTitle,
               style: CustomTextStyle.poppins300style16,
               textAlign: TextAlign.center,
               maxLines: 2,

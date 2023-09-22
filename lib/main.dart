@@ -13,9 +13,7 @@ class Dalel extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.offWhite
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: AppColors.offWhite),
       routerConfig: router,
     );
   }
