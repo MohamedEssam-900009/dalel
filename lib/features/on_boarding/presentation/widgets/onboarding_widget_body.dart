@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'custom_smooth_page_indicator.dart';
 
 class OnBoardingWidgetBody extends StatelessWidget {
-  OnBoardingWidgetBody(
+  const OnBoardingWidgetBody(
       {super.key, required this.controller, this.onPageChanged});
 
   final PageController controller;
-  Function(int)? onPageChanged;
+  final Function(int)? onPageChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

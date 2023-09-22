@@ -13,7 +13,8 @@ dependencies:
     sdk: flutter
   
   go_router: 
-  smooth_page_indicator: 
+  smooth_page_indicator:
+  shared_preferences:  
 
   cupertino_icons: ^1.0.2
 
