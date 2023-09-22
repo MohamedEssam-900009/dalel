@@ -1,7 +1,7 @@
 import 'package:dalel/core/utils/app_text_styles.dart';
+import 'package:dalel/features/on_boarding/data/models/on_boarding_model.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_assets.dart';
 import 'custom_smooth_page_indicator.dart';
 
 class OnBoardingWidgetBody extends StatelessWidget {
@@ -16,15 +16,15 @@ class OnBoardingWidgetBody extends StatelessWidget {
       child: PageView.builder(
         physics: const BouncingScrollPhysics(),
         controller: _controller,
-        itemCount: 3,
+        itemCount: onBoardingData.length,
         itemBuilder: (context, index) => Column(
           children: [
             Container(
               height: 290.0,
               width: 343.0,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(Assets.assetsImagesOnBoarding1),
+                  image: AssetImage(onBoardingData[index].imagePath),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -37,7 +37,7 @@ class OnBoardingWidgetBody extends StatelessWidget {
               height: 32.0,
             ),
             Text(
-              'Explore The history with Dalel in a smart way',
+              onBoardingData[index].title,
               style: CustomTextStyle.poppins500style24.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -49,7 +49,7 @@ class OnBoardingWidgetBody extends StatelessWidget {
               height: 16.0,
             ),
             Text(
-              'Explore The history with Dalel in a smart way',
+              onBoardingData[index].imagePath,
               style: CustomTextStyle.poppins300style16,
               textAlign: TextAlign.center,
               maxLines: 2,
