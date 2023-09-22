@@ -15,6 +15,7 @@ dependencies:
   go_router: 
   smooth_page_indicator:
   shared_preferences:  
+  get_it: 
 
   cupertino_icons: ^1.0.2
 

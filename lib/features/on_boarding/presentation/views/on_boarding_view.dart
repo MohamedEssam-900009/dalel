@@ -1,10 +1,10 @@
-import 'package:dalel/features/auth/data/cache/cache_helper.dart';
+import 'package:dalel/features/on_boarding/presentation/views/functions/on_boarding.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/functions/navigation.dart';
-import '../widgets/custom_nav_bar.dart';
-import '../widgets/get_buttons.dart';
-import '../widgets/onboarding_widget_body.dart';
+import 'widgets/custom_nav_bar.dart';
+import 'widgets/get_buttons.dart';
+import 'widgets/onboarding_widget_body.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -29,7 +29,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 height: 40.0,
               ),
               CustomNavBar(onTap: () {
-                CacheHelper().saveData(key: 'isOnBoardingVisited', value: true);
+                onBoardingVisited();
                 customReplacementNavigate(context, '/signUp');
               }),
               OnBoardingWidgetBody(

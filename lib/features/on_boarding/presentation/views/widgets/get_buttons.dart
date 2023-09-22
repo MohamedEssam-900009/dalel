@@ -1,10 +1,11 @@
+import 'package:dalel/features/on_boarding/presentation/views/functions/on_boarding.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/functions/navigation.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/app_text_styles.dart';
-import '../../../../core/widgets/custom_button.dart';
-import '../../data/models/on_boarding_model.dart';
+import '../../../../../core/functions/navigation.dart';
+import '../../../../../core/utils/app_strings.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/widgets/custom_button.dart';
+import '../../../data/models/on_boarding_model.dart';
 
 class GetButtons extends StatelessWidget {
   const GetButtons(
@@ -21,6 +22,7 @@ class GetButtons extends StatelessWidget {
           CustomButton(
             text: AppStrings.createAccount,
             onPressed: () {
+              onBoardingVisited();
               customReplacementNavigate(context, '/signUp');
             },
           ),
@@ -29,6 +31,7 @@ class GetButtons extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
+              onBoardingVisited();
               customReplacementNavigate(context, '/signIn');
             },
             child: Text(
