@@ -16,6 +16,7 @@ dependencies:
   smooth_page_indicator:
   shared_preferences:  
   get_it: 
+  flutter_bloc: 
 
   cupertino_icons: ^1.0.2
 
