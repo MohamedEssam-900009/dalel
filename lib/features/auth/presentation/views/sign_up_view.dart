@@ -1,10 +1,9 @@
-import 'package:dalel/core/utils/app_colors.dart';
 import 'package:dalel/core/utils/app_strings.dart';
-import 'package:dalel/core/utils/app_text_styles.dart';
 import 'package:dalel/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/custom_text_field.dart';
+import '../widgets/have_an_account_widget.dart';
 import '../widgets/terms_and_condition.dart';
 import '../widgets/welcome_text_widget.dart';
 
@@ -73,37 +72,7 @@ class SignUpView extends StatelessWidget {
             const SliverToBoxAdapter(
               child: HaveAnAccountWidget(
                 text1: AppStrings.alreadyHaveAnAccount,
-                text2: AppStrings.signUp,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class HaveAnAccountWidget extends StatelessWidget {
-  const HaveAnAccountWidget({
-    super.key,
-    required this.text1,
-    required this.text2,
-  });
-  final String text1, text2;
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      child: Text.rich(
-        TextSpan(
-          children: [
-            TextSpan(
-              text: text1,
-              style: CustomTextStyle.poppins400style12,
-            ),
-            TextSpan(
-              text: text2,
-              style: CustomTextStyle.poppins400style12.copyWith(
-                color: AppColors.lightGrey,
+                text2: AppStrings.signIn,
               ),
             ),
           ],
