@@ -4,7 +4,7 @@ import '../../../../../core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
 class CustomNavBar extends StatelessWidget {
-   CustomNavBar({
+   const CustomNavBar({
     super.key,
    required this.onTap
   });

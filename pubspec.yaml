@@ -17,6 +17,7 @@ dependencies:
   shared_preferences:  
   get_it: 
   flutter_bloc: 
+  firebase_core: 
 
   cupertino_icons: ^1.0.2
 
