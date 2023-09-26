@@ -21,6 +21,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
       side: BorderSide(color: AppColors.grey),
       onChanged: (newValue) {
         value = newValue;
+        setState(() {});
       },
     );
   }

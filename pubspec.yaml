@@ -18,6 +18,7 @@ dependencies:
   get_it: 
   flutter_bloc: 
   firebase_core: 
+  firebase_auth: 
 
   cupertino_icons: ^1.0.2
 

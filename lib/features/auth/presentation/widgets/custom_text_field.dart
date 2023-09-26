@@ -3,14 +3,25 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 
-class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, required this.labelText});
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
+    super.key,
+    required this.labelText,
+    this.onChanged,
+    this.onFieldSubmitted,
+  });
+
   final String labelText;
+  final Function(String)? onChanged;
+  final Function(String)? onFieldSubmitted;
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right:8.0,left: 8.0,top: 24.0, ) ,
-      child: TextField(
+      padding: const EdgeInsets.only(right: 8.0, left: 8.0, top: 24.0),
+      child: TextFormField(
+        onChanged: onChanged,
+        onFieldSubmitted: onFieldSubmitted,
         decoration: InputDecoration(
           labelText: labelText,
           labelStyle: CustomTextStyle.poppins500style18,
@@ -22,7 +33,6 @@ class CustomTextField extends StatelessWidget {
     );
   }
 }
-
 
 OutlineInputBorder getBorderStyle() {
   return OutlineInputBorder(

@@ -9,7 +9,8 @@ class HaveAnAccountWidget extends StatelessWidget {
     required this.text1,
     required this.text2,
   });
-  final String text1, text2;
+  final String text1;
+  final String text2;
   @override
   Widget build(BuildContext context) {
     return Align(
