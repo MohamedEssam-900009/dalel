@@ -9,11 +9,15 @@ class CustomTextFormField extends StatelessWidget {
     required this.labelText,
     this.onChanged,
     this.onFieldSubmitted,
+    this.obscureText,
+    this.suffixIcon,
   });
 
   final String labelText;
   final Function(String)? onChanged;
   final Function(String)? onFieldSubmitted;
+  final bool? obscureText;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +33,11 @@ class CustomTextFormField extends StatelessWidget {
         },
         onChanged: onChanged,
         onFieldSubmitted: onFieldSubmitted,
+        obscureText: obscureText ?? false,
         decoration: InputDecoration(
           labelText: labelText,
           labelStyle: CustomTextStyle.poppins500style18,
+          suffixIcon: suffixIcon,
           border: getBorderStyle(),
           enabledBorder: getBorderStyle(),
           focusedBorder: getBorderStyle(),
