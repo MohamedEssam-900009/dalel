@@ -1,6 +1,11 @@
+import 'package:dalel/core/functions/navigation.dart';
+import 'package:dalel/core/utils/app_strings.dart';
+import 'package:dalel/features/auth/presentation/widgets/custom_sign_in_form.dart';
+import 'package:dalel/features/auth/presentation/widgets/have_an_account_widget.dart';
+import 'package:dalel/features/auth/presentation/widgets/welcome_text_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/functions/navigation.dart';
+import '../widgets/welcome_banner.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -8,18 +13,48 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            onPressed: () {
-              customReplacementNavigate(context, '/signUp');
-            },
-            icon: const Icon(Icons.logout),
+      body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          const SliverToBoxAdapter(
+            child: WelcomeBanner(),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 32.0,
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: WelcomeTextWidget(
+              text: AppStrings.welcomeBack,
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: CustomSignInForm(),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 16.0,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: HaveAnAccountWidget(
+              text1: AppStrings.dintHaveAnAccount,
+              text2: AppStrings.signUp,
+              onTap: () {
+                customReplacementNavigate(context, '/signUp');
+              },
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 16.0,
+            ),
           ),
         ],
-      ),
-      body: const Center(
-        child: Text('Sign In'),
       ),
     );
   }

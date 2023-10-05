@@ -20,6 +20,7 @@ dependencies:
   firebase_core: 
   firebase_auth: 
   fluttertoast:
+  flutter_svg:
 
   cupertino_icons: ^1.0.2
 
@@ -42,6 +43,9 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
+    - family: Saira
+      fonts:
+        - asset: assets/fonts/Saira_Condensed-Regular.ttf
 
 
 flutter_assets:
