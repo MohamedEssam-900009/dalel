@@ -21,10 +21,7 @@ class WelcomeBanner extends StatelessWidget {
         children: [
           Text(
             AppStrings.appName,
-            style: CustomTextStyle.saira700style32,
-          ),
-          const SizedBox(
-            height: 18.0,
+            style: CustomTextStyle.pacifico700style42,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,5 +1,5 @@
 import 'package:dalel/features/auth/presentation/auth_cubit/cubit/auth_cubit.dart';
-import 'package:dalel/features/auth/presentation/views/forget_password.dart';
+import 'package:dalel/features/auth/presentation/views/forget_password_view.dart';
 import 'package:dalel/features/auth/presentation/views/sign_up_view.dart';
 import 'package:dalel/features/home/view/home_view.dart';
 import 'package:dalel/features/on_boarding/presentation/views/on_boarding_view.dart';
