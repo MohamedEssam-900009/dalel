@@ -23,7 +23,6 @@ class ForgetPasswordView extends StatelessWidget {
           SliverToBoxAdapter(child: SizedBox(height: 24.0)),
           SliverToBoxAdapter(child: ForgetPasswordSubTitle()),
           SliverToBoxAdapter(child: CustomForgetPasswordForm()),
-
         ],
       ),
     );

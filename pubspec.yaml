@@ -9,26 +9,24 @@ environment:
   sdk: ">=3.0.6 <4.0.0"
 
 dependencies:
+  cloud_firestore: 
+  cupertino_icons: 
+  firebase_auth: 
+  firebase_core: 
   flutter:
     sdk: flutter
-  
+  flutter_bloc:  
+  flutter_svg: 
+  fluttertoast:  
+  get_it:  
   go_router: 
-  smooth_page_indicator:
   shared_preferences:  
-  get_it: 
-  flutter_bloc: 
-  firebase_core: 
-  firebase_auth: 
-  fluttertoast:
-  flutter_svg:
-
-  cupertino_icons: ^1.0.2
+  smooth_page_indicator: 
 
 dev_dependencies:
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
-  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
@@ -46,7 +44,6 @@ flutter:
     - family: Saira
       fonts:
         - asset: assets/fonts/Saira_Condensed-Regular.ttf
-
 
 flutter_assets:
   assets_path: assets/images/
