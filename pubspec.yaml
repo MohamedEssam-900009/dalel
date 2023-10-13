@@ -15,12 +15,13 @@ dependencies:
   firebase_core: 
   flutter:
     sdk: flutter
-  flutter_bloc:  
+  flutter_bloc: 
   flutter_svg: 
-  fluttertoast:  
-  get_it:  
+  fluttertoast: 
+  get_it: 
   go_router: 
-  shared_preferences:  
+  persistent_bottom_nav_bar: 
+  shared_preferences: 
   smooth_page_indicator: 
 
 dev_dependencies:
