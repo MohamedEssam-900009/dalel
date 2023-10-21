@@ -41,6 +41,7 @@ abstract class AppStrings {
       historyBooks = 'History Books',
       historicalSouvenirs = 'Historical Souvenirs',
       historicalPeriods = 'Historical periods',
+      historicalCharacters = 'Historical Characters',
       //!Cart
       myCart = 'My Cart',
       totalPayment = 'Total Payment',
