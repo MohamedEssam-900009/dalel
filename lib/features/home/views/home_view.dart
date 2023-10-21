@@ -1,10 +1,9 @@
-import 'package:dalel/core/utils/app_strings.dart';
-import 'package:dalel/core/widgets/custom_header_text.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/custom_category_list_view.dart';
-import '../widgets/historical_period.dart';
-import '../widgets/home_app_bar_widget.dart';
+import '../widgets/home_sections/historical_characters_section.dart';
+import '../widgets/home_sections/historical_period_section.dart';
+import '../widgets/home_sections/historical_souvenirs_section.dart';
+import '../widgets/home_sections/home_app_bar_section.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -17,26 +16,12 @@ class HomeView extends StatelessWidget {
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
-            SliverToBoxAdapter(child: SizedBox(height: 28.0)),
-            SliverToBoxAdapter(child: CustomHomeViewAppBar()),
-            SliverToBoxAdapter(child: SizedBox(height: 32.0)),
-            SliverToBoxAdapter(
-                child: CustomHeaderText(text: AppStrings.historicalPeriods)),
-            SliverToBoxAdapter(child: SizedBox(height: 16.0)),
-            SliverToBoxAdapter(child: HistoricalPeriods()),
-            SliverToBoxAdapter(child: SizedBox(height: 32.0)),
-            SliverToBoxAdapter(
-                child: CustomHeaderText(text: AppStrings.historicalCharacters)),
-            SliverToBoxAdapter(
-              child: SizedBox(height: 16.0),
-            ),
-            SliverToBoxAdapter(child: CustomCategoryListView()),
-            SliverToBoxAdapter(child: SizedBox(height: 32.0)),
-            SliverToBoxAdapter(
-              child: CustomHeaderText(text: AppStrings.historicalSouvenirs),
-            ),
-            SliverToBoxAdapter(child: SizedBox(height: 16.0)),
-            SliverToBoxAdapter(child: CustomCategoryListView()),
+            //!AppBar
+            SliverToBoxAdapter(child: HomeAppBarSection()),
+            //!Historical Period
+            SliverToBoxAdapter(child: HistoricalPeriodSection()),
+            SliverToBoxAdapter(child: HistoricalCharactersSection()),
+            SliverToBoxAdapter(child: HistoricalSouvenirsSection()),
           ],
         ),
       ),
