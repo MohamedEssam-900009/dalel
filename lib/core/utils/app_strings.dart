@@ -67,3 +67,11 @@ abstract class AppStrings {
       enter4DigitCodeWeHaveSentTo = 'Enter 4 digit code we have sent to ',
       haventReceivedVerificationCode = 'Haven/’t received verification code?';
 }
+
+abstract class FireBaseStrings {
+  static const String historicalPeriods = 'historical_periods';
+  static const String name = 'name';
+  static const String image = 'image';
+  static const String description = 'description';
+  static const String wars = 'wars';
+}
