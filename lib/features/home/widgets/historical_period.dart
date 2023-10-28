@@ -3,6 +3,7 @@ import 'package:dalel/core/utils/app_strings.dart';
 import 'package:dalel/features/home/data/models/historical_periods_model.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/widgets/custom_shimmer_category.dart';
 import 'historical_period_item.dart';
 
 class HistoricalPeriods extends StatelessWidget {
@@ -46,68 +47,8 @@ class HistoricalPeriods extends StatelessWidget {
           );
         }
 
-        return const Text("loading");
+        return const CustomShimmerCategory();
       },
     );
   }
 }
-
-
-
-// FutureBuilder<QuerySnapshot>(
-//       future = FirebaseFirestore.instance
-//           .collection(FireBaseStrings.historicalPeriods)
-//           .get(),
-//       builder = (context, snapshot) {
-//         if (snapshot.hasError) {
-//           return const Text("Something went wrong");
-//         }
-
-//         if (snapshot.hasData && !snapshot.data!.docs[0].exists) {
-//           return const Text("Document does not exist");
-//         }
-
-//         if (snapshot.connectionState == ConnectionState.done) {
-//           return SizedBox(
-//             height: 200.0,
-//             child: ListView.separated(
-//               scrollDirection: Axis.horizontal,
-//               itemBuilder: (context, index) {
-        //         return SizedBox(
-        //   height = 96.0,
-        //   child = ListView.separated(
-        //     scrollDirection: Axis.horizontal,
-        //     separatorBuilder: (context, index) {
-        //       return const SizedBox(width: 10.0);
-        //     },
-        //     itemBuilder: (context, index) {
-        //       return const HistoricalPeriodItem();
-        //     },
-        //     itemCount: 1,
-        //   ),
-        // );
-//               },
-//               separatorBuilder: (context, index) {
-//                 return const SizedBox(width: 10.0);
-//               },
-//               itemCount: 1,
-//             ),
-//           );
-//           // Map<String, dynamic> data =
-//           //     snapshot.data!.docs[0].data() as Map<String, dynamic>;
-//           // return Text(data['name']);
-//         }
-
-//         return const Text("loading");
-//         // return Column(
-//         //   crossAxisAlignment: CrossAxisAlignment.start,
-//         //   children: [
-//         //     const CustomHeaderText(text: AppStrings.historicalPeriods),
-//         //     Text(snapshot.data!.docs[0]['name']),
-//         //     const SizedBox(height: 16.0),
-//         //     const HistoricalPeriods(),
-//         //     const SizedBox(height: 32.0),
-//         //   ],
-//         // );
-//       },
-//     );
