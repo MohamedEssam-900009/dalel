@@ -9,21 +9,22 @@ environment:
   sdk: ">=3.0.6 <4.0.0"
 
 dependencies:
-  cloud_firestore: 
-  cupertino_icons: 
-  firebase_auth: 
-  firebase_core: 
+  cached_network_image: ^3.3.0
+  cloud_firestore: null
+  cupertino_icons: null
+  firebase_auth: null
+  firebase_core: null
   flutter:
     sdk: flutter
-  flutter_bloc: 
-  flutter_svg: 
-  fluttertoast: 
-  get_it: 
-  go_router: 
-  persistent_bottom_nav_bar: 
-  shared_preferences: 
-  shimmer: 
-  smooth_page_indicator: 
+  flutter_bloc: null
+  flutter_svg: null
+  fluttertoast: null
+  get_it: null
+  go_router: null
+  persistent_bottom_nav_bar: null
+  shared_preferences: null
+  shimmer: null
+  smooth_page_indicator: null
 
 dev_dependencies:
   flutter_lints: ^2.0.0

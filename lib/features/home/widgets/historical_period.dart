@@ -37,6 +37,7 @@ class HistoricalPeriods extends StatelessWidget {
               separatorBuilder: (context, index) {
                 return const SizedBox(width: 10.0);
               },
+              clipBehavior: Clip.none,
               itemBuilder: (context, index) {
                 return HistoricalPeriodItem(
                   model: historicalPeriods[index],
